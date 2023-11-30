@@ -4,6 +4,9 @@ FROM node:latest
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
+# Install Bootstrap
+RUN npm install bootstrap
+
 # Copy only the necessary files for installing dependencies
 COPY ./frontend/angular-app/pataponto/package.json .
 
