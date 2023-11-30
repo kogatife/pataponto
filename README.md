@@ -1,6 +1,6 @@
 # PataPonto
 
-# ![PataPonto mascots: Kyra and Maya. Our Dogs that inspired me to create this project](img/kyraemaya.png)
+# ![PataPonto mascots: Kyra and Maya. Our Dogs that inspired me to create this project](img/kyramaya.png)
 
 *THIS IS A FINAL PAPER (the main objective is to learn how to develop a full web app and its infrastructure)
 
