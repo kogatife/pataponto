@@ -13,10 +13,10 @@
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="bootstrap.min.css" >
 
 
-
-<link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  
 
     <style>
       .bd-placeholder-img {
@@ -121,48 +121,6 @@
 
 
     
-<!-- <header data-bs-theme="dark">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" style="width: 50px; margin-right: 10px; margin-left: 10px;"/>  PataPonto</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navb" class="navbar-collapse collapse hide">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Procurar viagens</a>
-        </li>
-        <li class="nav-item">
-          <a  class="nav-link" href="#">Área do motorista</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="regras" class="nav-link" routerLinkActive="active">Regras de viagem</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Saiba mais</a>
-        </li>
-      </ul>
-  
-      <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#"><span class="fas fa-user"></span> Cadastre-se</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</header> -->
 
 <main style="margin-top: -40px;">
   <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
@@ -180,7 +138,7 @@
           <div class="carousel-caption text-start">
             <h1 style="color: black;"><mark class="opacity-75">Viage com seu pet!</mark></h1>
             <p class="opacity-75">Com a PataPonto você viaja tranquilo e com segurança.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Cadastre-se hoje</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/cadastro">Cadastre-se hoje</a></p>
           </div>
         </div>
       </div>
@@ -204,7 +162,7 @@
           <div class="carousel-caption text-end">
             <h1 style="color: black;"><mark class="opacity-75">Gato, cachorro?</mark></h1>
             <p>Com a PataPonto você pode viajar com qualquer PET!</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+            <p><a class="btn btn-lg btn-primary" href="/saibamais">Saiba mais</a></p>
           </div>
         </div>
       </div>
@@ -256,7 +214,7 @@
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">Voltar ao topo</a></p>
+    <p class="float-end"><a href="/home">Voltar ao topo</a></p>
     <p>&copy; 2023 PataPonto</p>
   </footer>
 </main>
