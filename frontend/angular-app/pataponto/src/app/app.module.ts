@@ -10,6 +10,7 @@ import { RegrasComponent } from './regras/regras.component';
 import { MotoristaComponent } from './motorista/motorista.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { ViagemComponent } from './viagem/viagem.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     HomeComponent,
     MotoristaComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    ViagemComponent
   ],
   imports: [
     BrowserModule,

@@ -8,11 +8,16 @@ import { RegrasComponent } from './regras/regras.component';
 import { MotoristaComponent } from './motorista/motorista.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { ViagemComponent } from './viagem/viagem.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'viagem',
+    component: ViagemComponent
   },
   {
     path: 'contato',
