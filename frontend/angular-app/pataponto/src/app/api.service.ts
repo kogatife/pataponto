@@ -20,6 +20,11 @@ export class ApiService {
     return this.http.get(url);
   }
 
+  getUserByEmail(email: string): Observable<any> {
+    const url = `${this.baseUrl}/get_user?email=${email}`;
+    return this.http.get(url);
+  }
+
   getTravels(): Observable<any> {
     const url = `${this.baseUrl}/get_travels`;
     return this.http.get(url);

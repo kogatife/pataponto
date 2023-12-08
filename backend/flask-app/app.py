@@ -37,8 +37,15 @@ def register_user():
 
 @app.route('/api/get_user', methods=['GET'])
 def get_user():
+    email = request.args.get('email')
+
     my_cursor_users = mydb.cursor()
-    my_cursor_users.execute('SELECT id, name, email, password FROM users')
+
+    if email:
+        my_cursor_users.execute('SELECT id, name, email, password FROM users WHERE email = %s', (email,))
+    else:
+        my_cursor_users.execute('SELECT id, name, email, password FROM users')
+
     db_users = my_cursor_users.fetchall()
 
     users = list()

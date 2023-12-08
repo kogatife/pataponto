@@ -1,28 +1,24 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
-
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="../../assets/images/login.png" id="icon" alt="User Icon" style="width: 150px;" />
+<div style="width: 40%; margin: auto; margin-top: 100px;">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-outline mb-4">
+      <input type="email" id="form2Example1" class="form-control" formControlName="email"/>
+      <label class="form-label" for="form2Example1">Email</label>
     </div>
 
-    <!-- Login Form -->
-    <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="email">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="senha">
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+    <div class="form-outline mb-4">
+      <input type="password" id="form2Example2" class="form-control" formControlName="password"/>
+      <label class="form-label" for="form2Example2">Senha</label>
     </div>
 
-  </div>
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+
+    <div class="text-center">
+      <p>Não possui cadastro? <a href="/cadastro">Registre-se</a></p>
+    </div>
+  </form>
 </div>
