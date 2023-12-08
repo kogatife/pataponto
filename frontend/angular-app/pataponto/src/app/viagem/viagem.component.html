@@ -1,4 +1,4 @@
-<h2 class="mb-4">Para onde deseja viajar com seu companheiro?</h2>
+<!-- <h2 class="mb-4">Para onde deseja viajar com seu companheiro?</h2>
 <div class="card-deck">
     <div class="card">
       <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
@@ -51,4 +51,18 @@
         <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
       </div>
     </div>
+</div> -->
+<h2 class="mb-4">Para onde deseja viajar com seu companheiro(a)?</h2>
+<div class="card-deck">
+  <div class="card" *ngFor="let trip of trips">
+
+    <img class="card-img-top" [src]="'../../assets/images/' + trip.destination + '.jpeg'" alt="Destino">
+    <div class="card-body">
+      <h5 class="card-title">{{ trip.destination }}</h5>
+      <p class="card-text">Partida: {{ trip.partida }}</p>
+      <p class="card-text">Volta: {{ trip.volta }}</p>
+      <p class="card-text">Preço: R$ {{ trip.preco | number:'1.2-2' }}</p>
+      <button class="btn btn-primary" >Selecionar</button>
+    </div>
+  </div>
 </div>
