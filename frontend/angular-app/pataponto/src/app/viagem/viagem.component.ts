@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { Viagens } from '../api';
 
 @Component({
   selector: 'app-viagem',
@@ -8,15 +7,16 @@ import { Viagens } from '../api';
   styleUrls: ['./viagem.component.css']
 })
 
-
 export class ViagemComponent implements OnInit {
+  constructor(private apiService: ApiService) {}
 
-  viagens: Viagens[] = [];
-  constructor(private service: ApiService) {}
-
-  ngOnInit() {
-    //this.service.list().subscribe(console.log);
-    this.service.list().subscribe(dados => this.viagens = dados);
+  ngOnInit(): void {
+    
+    this.apiService.getTravels().subscribe(response => {
+      console.log(response);
+      // TODO
+    });
   }
-
 }
+
+

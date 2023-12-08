@@ -1,20 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Viagens } from './api';
-import { tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+  private baseUrl = 'http://localhost:5000/api'; // Substitua pela URL real da sua API
 
-  private readonly GET_TRAVELS = 'http://localhost:5000/api/get_travels';
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  registerUser(user: any): Observable<any> {
+    const url = `${this.baseUrl}/register_user`;
+    return this.http.post(url, user);
+  }
 
-  list() {
-    return this.http.get<Viagens[]>(this.GET_TRAVELS).pipe(
-      tap(console.log)
-    );
+  getUsers(): Observable<any> {
+    const url = `${this.baseUrl}/get_user`;
+    return this.http.get(url);
+  }
+
+  getTravels(): Observable<any> {
+    const url = `${this.baseUrl}/get_travels`;
+    return this.http.get(url);
   }
 }
