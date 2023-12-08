@@ -1,4 +1,3 @@
-# Use the official Node.js image as base image
 FROM node:latest
 
 # Set the working directory in the container
@@ -15,6 +14,9 @@ RUN npm install --force
 
 # Install Angular CLI globally
 RUN npm install -g @angular/cli
+
+# Install types for date-fns
+RUN npm install --save-dev @types/date-fns
 
 # Copy the entire application to the container
 COPY ./frontend/angular-app/pataponto .
