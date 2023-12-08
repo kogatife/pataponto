@@ -1,6 +1,7 @@
 import mysql.connector
 import time
 from flask import Flask, make_response, jsonify, request
+from flask_cors import CORS
 
 time.sleep(45)
 
@@ -12,6 +13,7 @@ mydb = mysql.connector.connect(
 )
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def hello():
