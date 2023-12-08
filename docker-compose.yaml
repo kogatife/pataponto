@@ -1,17 +1,17 @@
 version: '3'
 
 services:
-  # angular-app:
-  #   build:
-  #     context: .
-  #     dockerfile: ./frontend/angular-app/Dockerfile
-  #   ports:
-  #     - "4200:4200"
-  #   volumes:
-  #     - ./frontend/angular-app/pataponto:/usr/src/app
-  #   working_dir: /usr/src/app/angular-app
-  #   depends_on:
-  #     - mysql
+  angular-app:
+    build:
+      context: .
+      dockerfile: ./frontend/angular-app/Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./frontend/angular-app/pataponto:/usr/src/app
+    working_dir: /usr/src/app/angular-app
+    depends_on:
+      - mysql
       
 
   flask-app:
